@@ -1,15 +1,18 @@
-const express = require('express');
-const queries = require('../db/queries.js');
+const express = require('express')
+const app = express()
+const port = 3000
 
-// port to use
-const PORT = 3003;
+const webpack = require('webpack');
+const config = require('../webpack.config.js');
+const compiler = webpack(config);
 
-// app
-const app = express();
+const webpackDevMiddleware = require('webpack-dev-middleware');
 
-// requests
+app.use(webpackDevMiddleware(compiler, {
+        publicPath: config.output.publicPath,
+    })
+)
 
-
-// listen
-app.listen(PORT);
-console.log(`Server is listening on port ${PORT}...`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
+})
