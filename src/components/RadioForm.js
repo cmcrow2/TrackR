@@ -1,29 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography, RadioGroup, Radio, Button } from '@material-ui/core';
 
-const RadioForm = () => {
-  const [selectedValueAB, setSelectedValueAB] = useState('a');
-  const [selectedValueCD, setSelectedValueCD] = useState('c');
-  const [selectedValueEF, setSelectedValueEF] = useState('e');
-  const [selectedValueGH, setSelectedValueGH] = useState('g');
+const RadioForm = ({
+  handleRadioSubmit,
+  selectedValueAB,
+  selectedValueCD,
+  selectedValueEF,
+  selectedValueGH,
+  handleChangeAB,
+  handleChangeCD,
+  handleChangeEF,
+  handleChangeGH
+}) => {
+  // const [selectedValueAB, setSelectedValueAB] = useState('a');
+  // const [selectedValueCD, setSelectedValueCD] = useState('c');
+  // const [selectedValueEF, setSelectedValueEF] = useState('e');
+  // const [selectedValueGH, setSelectedValueGH] = useState('g');
 
   // radio event handlers
-  const handleChangeAB = (event) => {
-    setSelectedValueAB(event.target.value);
-  };
-  const handleChangeCD = (event) => {
-    setSelectedValueCD(event.target.value);
-  };
-  const handleChangeEF = (event) => {
-    setSelectedValueEF(event.target.value);
-  };
-  const handleChangeGH = (event) => {
-    setSelectedValueGH(event.target.value);
-  };
+  // const handleChangeAB = (event) => {
+  //   setSelectedValueAB(event.target.value);
+  // };
+  // const handleChangeCD = (event) => {
+  //   setSelectedValueCD(event.target.value);
+  // };
+  // const handleChangeEF = (event) => {
+  //   setSelectedValueEF(event.target.value);
+  // };
+  // const handleChangeGH = (event) => {
+  //   setSelectedValueGH(event.target.value);
+  // };
 
   return (
-    <form>
-      <Typography style={{ fontSize: 26 }}>
+    <form onSubmit={handleRadioSubmit}>
+      <Typography style={{ fontSize: 22 }}>
         Application Sent:
         </Typography>
       <Grid container direction="row" alignItems="center">
@@ -50,7 +60,7 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography style={{ fontSize: 26 }}>
+      <Typography style={{ fontSize: 22 }}>
         Phone Screen Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
@@ -77,7 +87,7 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography style={{ fontSize: 26 }}>
+      <Typography style={{ fontSize: 22 }}>
         Interview Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
@@ -104,7 +114,7 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography style={{ fontSize: 26 }}>
+      <Typography style={{ fontSize: 22 }}>
         Offer Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
