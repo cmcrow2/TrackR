@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      message: "Hello World"
-    };
-  }
-  render() {
-    return (
-      <div>
-        <p>{this.state.message}</p>
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [message, setMessage] = useState('Hello World');
+
+  return (
+    <div>
+      <p>{message}</p>
+    </div>
+  );
+};
+
+export default App;
