@@ -10,7 +10,7 @@ const pool = new Pool({
 });
 
 const getApplicationData = (callback) => {
-  const query = 'SELECT * from applications';
+  const query = 'SELECT * FROM applications';
 
   ;(async () => {
     const client = await pool.connect()
