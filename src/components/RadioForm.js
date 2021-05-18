@@ -7,6 +7,7 @@ const RadioForm = () => {
   const [selectedValueEF, setSelectedValueEF] = useState('e');
   const [selectedValueGH, setSelectedValueGH] = useState('g');
 
+  // radio event handlers
   const handleChangeAB = (event) => {
     setSelectedValueAB(event.target.value);
   };
@@ -22,12 +23,12 @@ const RadioForm = () => {
 
   return (
     <form>
-      <Typography>
+      <Typography style={{ fontSize: 26 }}>
         Application Sent:
         </Typography>
       <Grid container direction="row" alignItems="center">
         <Grid item>
-          <Typography>Yes</Typography>
+          <Typography style={{ fontSize: 18 }}>Yes</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -38,7 +39,7 @@ const RadioForm = () => {
           />
         </Grid>
         <Grid item>
-          <Typography>No</Typography>
+          <Typography style={{ fontSize: 18 }}>No</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -49,12 +50,12 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography>
+      <Typography style={{ fontSize: 26 }}>
         Phone Screen Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
         <Grid item>
-          <Typography>Yes</Typography>
+          <Typography style={{ fontSize: 18 }}>Yes</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -65,7 +66,7 @@ const RadioForm = () => {
           />
         </Grid>
         <Grid item>
-          <Typography>No</Typography>
+          <Typography style={{ fontSize: 18 }}>No</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -76,12 +77,12 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography>
+      <Typography style={{ fontSize: 26 }}>
         Interview Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
         <Grid item>
-          <Typography>Yes</Typography>
+          <Typography style={{ fontSize: 18 }}>Yes</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -92,7 +93,7 @@ const RadioForm = () => {
           />
         </Grid>
         <Grid item>
-          <Typography>No</Typography>
+          <Typography style={{ fontSize: 18 }}>No</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -103,12 +104,12 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Typography>
+      <Typography style={{ fontSize: 26 }}>
         Offer Received:
         </Typography>
       <Grid container direction="row" alignItems="center">
         <Grid item>
-          <Typography>Yes</Typography>
+          <Typography style={{ fontSize: 18 }}>Yes</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -119,7 +120,7 @@ const RadioForm = () => {
           />
         </Grid>
         <Grid item>
-          <Typography>No</Typography>
+          <Typography style={{ fontSize: 18 }}>No</Typography>
         </Grid>
         <Grid item>
           <Radio
@@ -130,7 +131,10 @@ const RadioForm = () => {
           />
         </Grid>
       </Grid>
-      <Button variant="outlined" color="primary">Submit</Button>
+      <p>{`\n`}</p>
+      <Button variant="outlined">
+        <Typography style={{ fontSize: 18 }}>Submit</Typography>
+      </Button>
     </form>
   );
 };
