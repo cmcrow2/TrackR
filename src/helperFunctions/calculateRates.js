@@ -29,8 +29,8 @@ const calculateRates = (
   setOffers(offersCount);
 
   setPhoneScreensRate(Math.round((phoneScreensCount / data.length) * 100));
-  setInterviewsRate(Math.round((interviewsCount / data.length) * 100));
-  setOffersRate(Math.round((offersCount / data.length) * 100));
+  setInterviewsRate(Math.round((interviewsCount / phoneScreensCount) * 100));
+  setOffersRate(Math.round((offersCount / interviewsCount) * 100));
 };
 
 export default calculateRates;
