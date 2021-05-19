@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography, RadioGroup, Radio, Divider, Box } from '@material-ui/core';
-import RadioForm from './RadioForm.js';
 import axios from 'axios';
+
+import RadioForm from './RadioForm.js';
+import UserConversion from './UserConversion.js';
 
 const App = () => {
   const [applicationData, setApplicationData] = useState([]);
@@ -136,26 +138,15 @@ const App = () => {
                 </Box>
               </Grid>
               <Grid item xs={2}></Grid>
-              <Grid item xs={5}>
-                <Box>
-                  <Typography style={{ fontSize: 30 }}>
-                    <b>Your Conversion Rates:</b>
-                  </Typography>
-                  <br />
-                  <Typography style={{ fontSize: 22 }}>
-                    {`${appsSent} Applications Sent`}
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    {`${phoneScreens} Phone Screens (${phoneScreensRate}%)`}
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    {`${interviews} In-Person Interviews (${interviewsRate}%)`}
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    {`${offers} Offers (${offersRate}%)`}
-                  </Typography>
-                </Box>
-              </Grid>
+              <UserConversion
+                appsSent={appsSent}
+                phoneScreens={phoneScreens}
+                interviews={interviews}
+                offers={offers}
+                phoneScreensRate={phoneScreensRate}
+                interviewsRate={interviewsRate}
+                offersRate={offersRate}
+              />
             </Grid>
           </Box>
           <br />
@@ -169,10 +160,10 @@ const App = () => {
               <br />
               { phoneScreensRate < 20
                 ? <Typography style={{ fontSize: 22 }}>
-                  You are having some difficulty receiving phone screens from the companies you applied to. You should look over your resume again and see what you could change to make it better.
+                  You are having some difficulty receiving phone screenings from the companies you applied to. You should look over your resume again and see what you could change to make it better.
                 </Typography>
                 : <Typography style={{ fontSize: 22 }}>
-                  You're doing very well receiving interviews from the companies you applied to!
+                  You're doing very well receiving phone screenings from the companies you applied to!
                 </Typography>
               }
               <br />
@@ -190,7 +181,7 @@ const App = () => {
                 You are having some difficulty receiving offers from the companies you applied to. You should practice toy problems and refresh your knowledge on common interview questions.
                 </Typography>
                 : <Typography style={{ fontSize: 22 }}>
-                  Congratulations! Thank you for using TrackR, good luck on the next step of your journey as a Software Developer!
+                  Congratulations! Thank you for using TrackR, good luck on the next step of your journey as a Software Engineer!
                 </Typography>
               }
             </Box>
