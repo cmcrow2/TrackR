@@ -13,7 +13,6 @@ const calculateNumNeeded = (a, b, c) => {
   // calculate the number
   let result = Math.ceil(((a * c) - (100 * b)) / (100 - c));
 
-  console.log(a, b, c, result);
   return result;
 };
 
