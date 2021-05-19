@@ -19,7 +19,7 @@ const App = () => {
   const [interviewsRate, setInterviewsRate] = useState(0);
   const [offersRate, setOffersRate] = useState(0);
   const [updatedRates, setUpdatedRates] = useState(false);
-  const [lastStepReached, setLastStepReached] = useState('');
+  const [lastStepReached, setLastStepReached] = useState('application');
 
   // update data on page load
   useEffect(() => {

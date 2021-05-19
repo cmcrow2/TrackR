@@ -30,7 +30,7 @@ const Evaluation = ({ phoneScreensRate, interviewsRate, offers }) => {
         <br />
         { offers < 1
           ? <Typography style={{ fontSize: 22 }}>
-          You are having some difficulty receiving offers from the companies you applied to. You should practice toy problems and refresh your knowledge on common interview questions.
+          You haven't received an offer yet. You should practice toy problems and refresh your knowledge on common interview questions.
           </Typography>
           : <Typography style={{ fontSize: 22 }}>
             Congratulations! Thank you for using TrackR, good luck on the next step of your journey as a Software Engineer!
