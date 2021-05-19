@@ -28,20 +28,20 @@ const calculateRates = (
   setInterviews(interviewsCount);
   setOffers(offersCount);
 
-  if (isNaN(Math.round((phoneScreensCount / data.length) * 100))) {
+  if (isNaN(Math.floor((phoneScreensCount / data.length) * 100))) {
     setPhoneScreensRate(0);
   } else {
-    setPhoneScreensRate(Math.round((phoneScreensCount / data.length) * 100))
+    setPhoneScreensRate(Math.floor((phoneScreensCount / data.length) * 100))
   }
-  if (isNaN(Math.round((interviewsCount / phoneScreensCount) * 100))) {
+  if (isNaN(Math.floor((interviewsCount / phoneScreensCount) * 100))) {
     setInterviewsRate(0);
   } else {
-    setInterviewsRate(Math.round((interviewsCount / phoneScreensCount) * 100));
+    setInterviewsRate(Math.floor((interviewsCount / phoneScreensCount) * 100));
   }
-  if (isNaN(Math.round((offersCount / interviewsCount) * 100))) {
+  if (isNaN(Math.floor((offersCount / interviewsCount) * 100))) {
     setOffersRate(0);
   } else {
-    setOffersRate(Math.round((offersCount / interviewsCount) * 100));
+    setOffersRate(Math.floor((offersCount / interviewsCount) * 100));
   }
 };
 

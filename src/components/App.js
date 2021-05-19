@@ -21,7 +21,7 @@ const App = () => {
   const [phoneScreensRate, setPhoneScreensRate] = useState(0);
   const [interviewsRate, setInterviewsRate] = useState(0);
   const [offersRate, setOffersRate] = useState(0);
-  const [updatedRates, setUpdatedRates] = useState(false);
+  const [updatedRates, setUpdatedRates] = useState(0);
   const [lastStepReached, setLastStepReached] = useState('application');
 
   // update data on page load
@@ -42,7 +42,7 @@ const App = () => {
         calculateRates(
           applications.data,
           setAppsSent, setPhoneScreens, setInterviews, setOffers,
-          setPhoneScreensRate, setInterviewsRate, setOffersRate
+          setPhoneScreensRate, setInterviewsRate, setOffersRate,
         );
       })
       .catch((err) => {
@@ -76,7 +76,7 @@ const App = () => {
   return (
     <Grid>
       <Header searchInput={searchInput} setSearchInput={setSearchInput} userSearchSubmit={userSearchSubmit} />
-      <Box pt={20}>
+      <Box pt={14}>
         <Grid container>
           <Grid item xs={1}></Grid>
           <Grid item xs={3}>
@@ -92,8 +92,8 @@ const App = () => {
           </Grid>
           <Grid item xs={7}>
             <Box pl={6}>
-              <Typography style={{fontSize: 36}}>
-                <b><u>{`Showing User ${currentUser}'s Data:`}</u></b>
+              <Typography style={{fontSize: 30}}>
+                <b>{`Showing User ${currentUser}'s Data:`}</b>
               </Typography>
             </Box>
             <br />
@@ -121,6 +121,9 @@ const App = () => {
               phoneScreensRate={phoneScreensRate}
               interviewsRate={interviewsRate}
               offers={offers}
+              appsSent={appsSent}
+              phoneScreens={phoneScreens}
+              interviews={interviews}
             />
           </Grid>
           <Grid item xs={1}></Grid>

@@ -1,7 +1,19 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
 
-const Evaluation = ({ phoneScreensRate, interviewsRate, offers }) => {
+import calculateNumNeeded from '../helperFunctions/calculateNumNeeded.js';
+
+const Evaluation = ({
+  phoneScreensRate,
+  interviewsRate,
+  offers,
+  appsSent,
+  phoneScreens,
+  interviews
+}) => {
+
+  let phoneScreensNeeded = calculateNumNeeded(appsSent, phoneScreens, 20);
+  let interviewsNeeded = calculateNumNeeded(phoneScreens, interviews, 50);
 
   return (
     <Grid item>
@@ -11,18 +23,28 @@ const Evaluation = ({ phoneScreensRate, interviewsRate, offers }) => {
         </Typography>
         <br />
         { phoneScreensRate < 20
-          ? <Typography style={{ fontSize: 22 }}>
-            You are having some difficulty receiving phone screenings from the companies you applied to. You should look over your resume again and see what you could change to make it better.
-          </Typography>
+          ? <div>
+            <Typography style={{ fontSize: 22 }}>
+              You are having some difficulty receiving phone screenings from the companies you applied to. You should look over your resume again and see what you could change to make it better.
+            </Typography>
+            <Typography style={{ fontSize: 22 }}>
+              {`You need to send ${phoneScreensNeeded} more application(s) and receive the same number of phone screenings to reach the target rate.`}
+            </Typography>
+          </div>
           : <Typography style={{ fontSize: 22 }}>
             You're doing very well receiving phone screenings from the companies you applied to!
           </Typography>
         }
         <br />
         { interviewsRate < 50
-          ? <Typography style={{ fontSize: 22 }}>
-            You are having some difficulty receiving interviews from the companies you applied to. You should practice and improve your personal narrative.
-          </Typography>
+          ? <div>
+            <Typography style={{ fontSize: 22 }}>
+              You are having some difficulty receiving interviews from the companies you applied to. You should practice and improve your personal narrative.
+            </Typography>
+            <Typography style={{ fontSize: 22 }}>
+              {`You need to send ${interviewsNeeded} more application(s) and receive the same number of interviews to reach the target rate.`}
+            </Typography>
+          </div>
           : <Typography style={{ fontSize: 22 }}>
             You're doing very well receiving phone screens from the companies you applied to!
           </Typography>
@@ -30,10 +52,10 @@ const Evaluation = ({ phoneScreensRate, interviewsRate, offers }) => {
         <br />
         { offers < 1
           ? <Typography style={{ fontSize: 22 }}>
-          You haven't received an offer yet. You should practice toy problems and refresh your knowledge on common interview questions.
+          You haven't received an offer yet. You should practice toy problems and refresh your knowledge on common interview questions. You only need 1 offer regardless of your conversion rate. You got this!
           </Typography>
           : <Typography style={{ fontSize: 22 }}>
-            Congratulations! Thank you for using TrackR, good luck on the next step of your journey as a Software Engineer!
+            Congratulations of receiving a job offer! Thank you for using TrackR, good luck on the next step of your journey as a Software Engineer!
           </Typography>
         }
       </Box>
