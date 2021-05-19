@@ -6,7 +6,7 @@ const BaseConversion = () => {
   return (
     <Grid item xs={5}>
       <Typography style={{ fontSize: 30 }}>
-        <b>Base Conversion Rates:</b>
+        <b>Target Conversion Rates:</b>
       </Typography>
       <br />
       <Typography style={{ fontSize: 22 }}>
