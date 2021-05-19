@@ -68,12 +68,14 @@ const App = () => {
 
   // handle the user search
   const userSearchSubmit = (event) => {
-    return;
+    event.preventDefault();
+    setCurrentUser(event.target.id);
+    requestData(event.target.id);
   };
 
   return (
     <Grid>
-      <Header userSearchSubmit={userSearchSubmit} />
+      <Header searchInput={searchInput} setSearchInput={setSearchInput} userSearchSubmit={userSearchSubmit} />
       <Box pt={16}>
         <Grid container>
           <Grid item xs={1}></Grid>

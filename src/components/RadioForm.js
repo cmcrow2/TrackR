@@ -30,7 +30,7 @@ const RadioForm = ({ handleRadioSubmit, lastStepReached, setLastStepReached }) =
           <FormControlLabel value="offer" control={<Radio />} label="I got an offer!" />
         </RadioGroup>
         <br />
-        <Button type="submit" variant="outlined">
+        <Button type="submit" variant="outlined" color="primary">
           Submit
         </Button>
       </FormControl>

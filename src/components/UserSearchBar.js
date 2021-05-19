@@ -10,7 +10,7 @@ const UserSearchBar = ({ searchInput, setSearchInput, userSearchSubmit }) => {
     >
       <TextField
         placeholder="Search for Users..."
-        onChange={e => setSearchInput(e.target.value)}
+        onChange={event => setSearchInput(event.target.value)}
       />
     </form>
   );
