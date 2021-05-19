@@ -76,7 +76,7 @@ const App = () => {
   return (
     <Grid>
       <Header searchInput={searchInput} setSearchInput={setSearchInput} userSearchSubmit={userSearchSubmit} />
-      <Box pt={16}>
+      <Box pt={20}>
         <Grid container>
           <Grid item xs={1}></Grid>
           <Grid item xs={3}>
@@ -92,11 +92,18 @@ const App = () => {
           </Grid>
           <Grid item xs={7}>
             <Box pl={6}>
+              <Typography style={{fontSize: 36}}>
+                <b><u>{`Showing User ${currentUser}'s Data:`}</u></b>
+              </Typography>
+            </Box>
+            <br />
+            <Divider />
+            <br />
+            <Box pl={6}>
               <Grid container direction="row">
                 <BaseConversion />
                 <Grid item xs={2}></Grid>
                 <UserConversion
-                  currentUser={currentUser}
                   appsSent={appsSent}
                   phoneScreens={phoneScreens}
                   interviews={interviews}
