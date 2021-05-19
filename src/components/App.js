@@ -6,6 +6,7 @@ import RadioForm from './RadioForm.js';
 import BaseConversion from './BaseConversion.js';
 import UserConversion from './UserConversion.js';
 import calculateRates from '../helperFunctions/calculateRates.js';
+import createNewApplication from '../helperFunctions/createNewApplication.js'
 
 const App = () => {
   const [applicationData, setApplicationData] = useState([]);
@@ -49,23 +50,7 @@ const App = () => {
   const handleRadioSubmit = (event) => {
     event.preventDefault();
 
-    let newApplicationData = {
-      application: true,
-      phone_screen: false,
-      interview: false,
-      offer: false
-    };
-
-    if (lastStepReached === 'phone') {
-      newApplicationData.phone_screen = true;
-    } else if (lastStepReached === 'interview') {
-      newApplicationData.phone_screen = true;
-      newApplicationData.interview = true;
-    } else if (lastStepReached === 'offer') {
-      newApplicationData.phone_screen = true;
-      newApplicationData.interview = true;
-      newApplicationData.offer = true;
-    }
+    const newApplicationData = createNewApplication(lastStepReached);
 
     axios.post('/applications', newApplicationData)
       .then((res) => {
