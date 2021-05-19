@@ -3,6 +3,7 @@ import { Grid, Typography, RadioGroup, Radio, Divider, Box } from '@material-ui/
 import axios from 'axios';
 
 import RadioForm from './RadioForm.js';
+import BaseConversion from './BaseConversion.js';
 import UserConversion from './UserConversion.js';
 
 const App = () => {
@@ -17,10 +18,12 @@ const App = () => {
   const [updatedRates, setUpdatedRates] = useState(false);
   const [lastStepReached, setLastStepReached] = useState('');
 
+  // update data on page load
   useEffect(() => {
     requestData();
   }, []);
 
+  // update rates on form submit
   useEffect(() => {
     requestData();
   }, [updatedRates]);
@@ -117,26 +120,7 @@ const App = () => {
         <Grid item xs={7}>
           <Box pl={6}>
             <Grid container direction="row">
-              <Grid item xs={5}>
-                <Box>
-                  <Typography style={{ fontSize: 30 }}>
-                    <b>Base Conversion Rates:</b>
-                  </Typography>
-                  <br />
-                  <Typography style={{ fontSize: 22 }}>
-                    100 Applications Sent
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    20 Phone Screens (20%)
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    10 In-Person Interviews (50%)
-                  </Typography>
-                  <Typography style={{ fontSize: 22 }}>
-                    2 Offers (20%)
-                  </Typography>
-                </Box>
-              </Grid>
+              <BaseConversion />
               <Grid item xs={2}></Grid>
               <UserConversion
                 appsSent={appsSent}
