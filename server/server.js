@@ -24,6 +24,10 @@ app.get('/applications', (req, res) => {
   })
 });
 
+app.post('/applications', (req, res) => {
+  console.log(req.body);
+})
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 });

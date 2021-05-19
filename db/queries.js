@@ -9,6 +9,7 @@ const pool = new Pool({
   port: process.env.DB_PORT
 });
 
+// get all the application data from the applications table
 const getApplicationData = (callback) => {
   const query = 'SELECT * FROM applications';
 
@@ -22,6 +23,11 @@ const getApplicationData = (callback) => {
     }
   })().catch(err => console.log(err.stack));
 };
+
+// post the information to the applications table
+const postApplication = (callback) => {
+  
+}
 
 module.exports = ({
   getApplicationData

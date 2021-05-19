@@ -13,10 +13,7 @@ const App = () => {
   const [interviewsRate, setInterviewsRate] = useState(0);
   const [offersRate, setOffersRate] = useState(0);
   const [updatedRates, setUpdatedRates] = useState(false);
-  const [selectedValueAB, setSelectedValueAB] = useState('a');
-  const [selectedValueCD, setSelectedValueCD] = useState('c');
-  const [selectedValueEF, setSelectedValueEF] = useState('e');
-  const [selectedValueGH, setSelectedValueGH] = useState('g');
+  const [lastStepReached, setLastStepReached] = useState('');
 
   useEffect(() => {
     requestData();
@@ -71,21 +68,9 @@ const App = () => {
 
   // handle the form submit
   const handleRadioSubmit = (event) => {
-    setUpdatedRates(!updatedRates);
-  };
+    event.preventDefault();
 
-  // handle changes to the radios
-  const handleChangeAB = (event) => {
-    setSelectedValueAB(event.target.value);
-  };
-  const handleChangeCD = (event) => {
-    setSelectedValueCD(event.target.value);
-  };
-  const handleChangeEF = (event) => {
-    setSelectedValueEF(event.target.value);
-  };
-  const handleChangeGH = (event) => {
-    setSelectedValueGH(event.target.value);
+    setUpdatedRates(!updatedRates);
   };
 
   return (
@@ -99,14 +84,8 @@ const App = () => {
           <br />
           <RadioForm
             handleRadioSubmit={handleRadioSubmit}
-            selectedValueAB={selectedValueAB}
-            selectedValueCD={selectedValueCD}
-            selectedValueEF={selectedValueEF}
-            selectedValueGH={selectedValueGH}
-            handleChangeAB={handleChangeAB}
-            handleChangeCD={handleChangeCD}
-            handleChangeEF={handleChangeEF}
-            handleChangeGH={handleChangeGH}
+            lastStepReached={lastStepReached}
+            setLastStepReached={setLastStepReached}
           />
         </Grid>
         <Grid item xs={7}>
@@ -184,10 +163,10 @@ const App = () => {
               <br />
               { offers < 1
                 ? <Typography style={{ fontSize: 22 }}>
-                You are having some difficulty getting offers from the companies you applied to. You should practice toy problems and refresh your knowledge on common interview questions.
+                You are having some difficulty receiving offers from the companies you applied to. You should practice toy problems and refresh your knowledge on common interview questions.
                 </Typography>
                 : <Typography style={{ fontSize: 22 }}>
-                  Congratulations! Thank you for using Trackr, good luck on the next step of your journey as a Software Developer!
+                  Congratulations! Thank you for using TrackR, good luck on the next step of your journey as a Software Developer!
                 </Typography>
               }
             </Box>
