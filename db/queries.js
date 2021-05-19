@@ -11,9 +11,9 @@ const pool = new Pool({
 
 // get all the application data from the applications table
 const getApplicationData = (callback) => {
-  const query = 'SELECT * FROM applications';
+  const query = 'SELECT * FROM applications;';
 
-  ;(async () => {
+  ; (async () => {
     const client = await pool.connect()
     try {
       const res = await client.query(query);
@@ -25,10 +25,22 @@ const getApplicationData = (callback) => {
 };
 
 // post the information to the applications table
-const postApplication = (callback) => {
-  
+const postApplication = (newData, callback) => {
+  const query = `INSERT INTO applications (application, phone_screen, interview, offer)
+    VALUES (${newData.application}, ${newData.phone_screen}, ${newData.interview}, ${newData.offer});`;
+
+  ; (async () => {
+    const client = await pool.connect()
+    try {
+      const res = await client.query(query);
+      callback(null, res.rows);
+    } finally {
+      client.release();
+    }
+  })().catch(err => console.log(err.stack));
 }
 
 module.exports = ({
-  getApplicationData
+  getApplicationData,
+  postApplication
 });

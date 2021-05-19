@@ -61,16 +61,40 @@ const App = () => {
     setInterviews(interviewsCount);
     setOffers(offersCount);
 
-    setPhoneScreensRate((phoneScreensCount / data.length) * 100);
-    setInterviewsRate((interviewsCount / data.length) * 100);
-    setOffersRate((offersCount / data.length) * 100);
+    setPhoneScreensRate(Math.round((phoneScreensCount / data.length) * 100));
+    setInterviewsRate(Math.round((interviewsCount / data.length) * 100));
+    setOffersRate(Math.round((offersCount / data.length) * 100));
   };
 
   // handle the form submit
   const handleRadioSubmit = (event) => {
     event.preventDefault();
 
-    setUpdatedRates(!updatedRates);
+    let newApplicationData = {
+      application: true,
+      phone_screen: false,
+      interview: false,
+      offer: false
+    };
+
+    if (lastStepReached === 'phone') {
+      newApplicationData.phone_screen = true;
+    } else if (lastStepReached === 'interview') {
+      newApplicationData.phone_screen = true;
+      newApplicationData.interview = true;
+    } else if (lastStepReached === 'offer') {
+      newApplicationData.phone_screen = true;
+      newApplicationData.interview = true;
+      newApplicationData.offer = true;
+    }
+
+    axios.post('/applications', newApplicationData)
+      .then((res) => {
+        setUpdatedRates(!updatedRates);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   };
 
   return (
