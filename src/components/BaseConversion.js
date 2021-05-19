@@ -14,7 +14,7 @@ const BaseConversion = () => {
       </Typography>
       <Typography style={{ fontSize: 22 }}>
         20 Phone Screens (20%)
-                    </Typography>
+      </Typography>
       <Typography style={{ fontSize: 22 }}>
         10 In-Person Interviews (50%)
       </Typography>

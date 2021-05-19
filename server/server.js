@@ -15,8 +15,9 @@ app.use(webpackDevMiddleware(compiler, {
     })
 );
 
-app.get('/applications', (req, res) => {
-  queries.getApplicationData((error, data) => {
+app.get(`/applications/:user`, (req, res) => {
+  const user = req.params.user;
+  queries.getApplicationData(user, (error, data) => {
     if (error) {
       console.error(error);
     } else {

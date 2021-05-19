@@ -10,8 +10,8 @@ const pool = new Pool({
 });
 
 // get all the application data from the applications table
-const getApplicationData = (callback) => {
-  const query = 'SELECT * FROM applications;';
+const getApplicationData = (user, callback) => {
+  const query = `SELECT * FROM applications WHERE username = '${user}';`;
 
   ; (async () => {
     const client = await pool.connect()
@@ -26,8 +26,14 @@ const getApplicationData = (callback) => {
 
 // post the information to the applications table
 const postApplication = (newData, callback) => {
-  const query = `INSERT INTO applications (application, phone_screen, interview, offer)
-    VALUES (${newData.application}, ${newData.phone_screen}, ${newData.interview}, ${newData.offer});`;
+  const query = `INSERT INTO applications (username, application, phone_screen, interview, offer)
+    VALUES (
+      '${newData.username}',
+      ${newData.application},
+      ${newData.phone_screen},
+      ${newData.interview},
+      ${newData.offer}
+    );`;
 
   ; (async () => {
     const client = await pool.connect()

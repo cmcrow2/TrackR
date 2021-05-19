@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
 const UserConversion = ({
+  currentUser,
   appsSent, phoneScreens, interviews, offers,
   phoneScreensRate, interviewsRate, offersRate
 }) => {
@@ -17,7 +18,7 @@ const UserConversion = ({
   return (
     <Grid item xs={5}>
       <Typography style={{ fontSize: 30 }}>
-        <b>Your Conversion Rates:</b>
+        <b>{`User ${currentUser}'s Rates:`}</b>
       </Typography>
       <br />
       <Typography style={{ fontSize: 22 }}>
