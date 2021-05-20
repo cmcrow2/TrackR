@@ -4,7 +4,7 @@
   <h1 align="left">Job Search Logger for Bootcamp Graduates</h1>
 
   <p align="left">
-    This is a project that I initially built in two days. The main functionality of the project is to log a user's application data (i.e. how far the user got in the interview process). The user can select from 4 radio buttons (application sent, phone screening, interview, and job offer) to log that application's final progress. My goal for the future is to add the ability for the user to add the company and title information for each application and dynamically render that list. Another goal is to add a status to the application as in-progress and complete, so that if the application process is still pending, its data is not counted towards the user's conversion rates.
+    This is a project that I initially built in two days. The main functionality of the project is to log a user's application data (i.e. how far the user got in the interview process). The user can select from 4 radio buttons (application sent, phone screening, interview, and job offer) to log that application's final progress. My goal for the future is to add the ability for the user to add the company and title information for each application and dynamically render that list. Another goal is to add a status to the application as in-progress or complete, so that if the application process is still pending, its data is not counted towards the user's conversion rates. The user could then look up a specific application and change its status to complete when applicable.
     <br />
     <h3 align="left">
      <strong>Author »</strong>
@@ -91,10 +91,6 @@ The final product, when tested with <a href="https://loader.io">loader.io</a> wi
       <th>Workflow</th>
       <td>
         <img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
-        <img alt="Trello" src="https://img.shields.io/badge/Trello-%23026AA7.svg?&style=for-the-badge&logo=Trello&logoColor=white"/>
-        <img alt="Slack" src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/>
-        <img alt="Discord" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"/>
-        <img alt="Zoom" src="https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white"/>
       </td>
     </tr>
     <tr>
@@ -108,13 +104,7 @@ The final product, when tested with <a href="https://loader.io">loader.io</a> wi
 
 
 # Workflow
-Our team used Agile workflow for this project.
-
-## Trello
-A Trello board was used to create and track tickets. We held daily standup meetings to discuss accomplishments, challenges, and upcoming tickets. We utilitized Discord, Slack, and Zoom in order to maintain effective remote collaboration and allow for quick communication when necessary.
-
-## Version Control
-We utilized Git Feature Branch workflow. All pull requests in Github were reviewed by another team member before being merged into the main branch.
+I worked on the master branch for this project.
 
 # Development
 
