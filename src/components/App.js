@@ -80,7 +80,7 @@ const App = () => {
         <Grid container>
           <Grid item xs={1}></Grid>
           <Grid item xs={3}>
-            <Typography style={{ fontSize: 30 }}>
+            <Typography style={{ fontSize: 22 }}>
               <b>How far did you make it through the interview process?</b>
             </Typography>
             <br />
@@ -89,6 +89,13 @@ const App = () => {
               lastStepReached={lastStepReached}
               setLastStepReached={setLastStepReached}
             />
+            <br /><br />
+            <Typography style={{ fontSize: 22 }}>
+              <b>Explanation of the rates:</b>
+            </Typography>
+            <Typography style={{ fontSize: 18 }}>
+              The target conversion rates are an average of the data reported by Hack Reactor grads. A recent grad of the program should seek to have 20% of their applications turn into phone screenings, 50% of phone screenings to turn into interviews, and 20% of interviews to turn into job offers.
+            </Typography>
           </Grid>
           <Grid item xs={7}>
             <Box pl={6}>
