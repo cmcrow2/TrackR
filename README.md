@@ -23,19 +23,12 @@
         <li><a href="#stack">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#system-design">System Design</a></li>
-    <li><a href="#database-and-etl">Database and ETL</a></li>
-    <li><a href="#api-server">API Server</a></li>
-    <li><a href="#optimization">Optimization</a></li>
-    <li><a href="#deployment">Deployment</a></li>
-    <li><a href="#stress-testing">Stress Testing</a></li>
-    <li>
-     <a href="#workflow">Workflow</a>
-     <ul>
-      <li><a href="#trello">Trello</a></li>
-      <li><a href="#version-control">Version Control</a></li>
-     </ul>
-    </li>
+    <li><a href="#system-design">Placeholder</a></li>
+    <li><a href="#database-and-etl">PlaceholderL</a></li>
+    <li><a href="#api-server">Placeholder</a></li>
+    <li><a href="#optimization">Placeholder</a></li>
+    <li><a href="#deployment">Placeholder</a></li>
+    <li><a href="#stress-testing">Placeholder</a></li>
     <li>
      <a href="#development">Development</a>
      <ul>
@@ -48,17 +41,17 @@
 </details>
 
 # About
-I was tasked with re-engineering the backend of the "Reviews" service of a mock fashion website frontend. I designed:
-  * RESTful API to handle requests to a database system of my own choosing
-  * ETL (Extract, Transform, Load) process on a raw, flawed data set consisting of over thirty million records
-  * Design and build an API server to provide data to the client in the format specified by the API documentation
-  * Optimize database and query methods for speed and response
-  * Deploy to the cloud using AWS
-  * Stress test all API routes, checking for RPS (requests per second), latency, and error rate via loader.io
+Placeholder
+  * Placeholder
+  * Placeholder
+  * Placeholder
+  * Placeholder
+  * Placeholder
+  * Placeholder
 
-The final product, when tested with <a href="https://loader.io">loader.io</a> with a maximum of 676 users per second, registered an average response time of 14 ms with a 0.0% error rate.
+Placeholder
 
-![](./loaderio.png)
+![](./Placeholder.png)
 
 
 # Stack
@@ -104,7 +97,7 @@ The final product, when tested with <a href="https://loader.io">loader.io</a> wi
 
 
 # Workflow
-I worked on the master branch for this project.
+I worked from the master branch for this project.
 
 # Development
 
