@@ -13,47 +13,6 @@
   </p>
 </p>
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about">About The Project</a>
-      <ul>
-        <li><a href="#stack">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#system-design">Placeholder</a></li>
-    <li><a href="#database-and-etl">PlaceholderL</a></li>
-    <li><a href="#api-server">Placeholder</a></li>
-    <li><a href="#optimization">Placeholder</a></li>
-    <li><a href="#deployment">Placeholder</a></li>
-    <li><a href="#stress-testing">Placeholder</a></li>
-    <li>
-     <a href="#development">Development</a>
-     <ul>
-      <li><a href="#repo">Repo</a></li>
-      <li><a href="#install">Install</a></li>
-      <li><a href="#start-scripts">Start Scripts</a></li>
-     </ul>
-    </li>
-  </ol>
-</details>
-
-# About
-Placeholder
-  * Placeholder
-  * Placeholder
-  * Placeholder
-  * Placeholder
-  * Placeholder
-  * Placeholder
-
-Placeholder
-
-![](./Placeholder.png)
-
-
 # Stack
 
 <table>
