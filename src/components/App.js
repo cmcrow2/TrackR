@@ -5,7 +5,7 @@ import axios from 'axios';
 import RadioForm from './RadioForm.js';
 import BaseConversion from './BaseConversion.js';
 import UserConversion from './UserConversion.js';
-import Evaluation from './Evaluation.js';
+import Evaluation from './evaluations/Evaluation.js';
 import Header from './Header.js';
 import calculateRates from '../helperFunctions/calculateRates.js';
 import createNewApplication from '../helperFunctions/createNewApplication.js';
