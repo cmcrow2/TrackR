@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS applications (
   application bool DEFAULT false,
   phone_screen bool DEFAULT false,
   interview bool DEFAULT false,
-  offer bool DEFAULT false
+  offer bool DEFAULT false,
+  complete bool DEFAULT false
 );
 
 -- INSERT INTO applications (username, application, phone_screen, interview, offer) VALUES ('cmcrow2', true, true, true, false);
