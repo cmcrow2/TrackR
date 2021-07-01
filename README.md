@@ -61,7 +61,7 @@ I worked from the master branch for this project.
 # Development
 
 ## Repo
-`git clone https://github.com/Team-San-Antonio/SDC-Reviews-Service.git`
+`git clone https://github.com/cmcrow2/TrackR.git`
 
 ## Install
 `npm install`
