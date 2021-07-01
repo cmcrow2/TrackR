@@ -22,14 +22,14 @@ const EvalText = ({
       { phoneScreensRate < 20
         ? <PhoneEval phoneScreensNeeded={phoneScreensNeeded} />
         : <Typography style={{ fontSize: 22 }}>
-          You're doing very well receiving phone screenings from the companies you applied to!
+          You're doing very well receiving phone screenings from the companies you have applied to!
         </Typography>
       }
       <br />
       { interviewsRate < 50
         ? <InterviewEval interviewsNeeded={interviewsNeeded} />
         : <Typography style={{ fontSize: 22 }}>
-          You're doing very well receiving phone screens from the companies you applied to!
+          You're doing very well receiving phone screens from the companies you have applied to!
         </Typography>
       }
       <br />
