@@ -3,6 +3,7 @@ import { Grid, Typography, Box } from '@material-ui/core';
 
 import calculateNumNeeded from '../helperFunctions/calculateNumNeeded.js';
 import PhoneEval from './phoneEval.js';
+import InterviewEval from './interviewEval.js';
 
 const Evaluation = ({
   phoneScreensRate,
@@ -24,21 +25,14 @@ const Evaluation = ({
         </Typography>
         <br />
         { phoneScreensRate < 20
-          ? <PhoneEval phoneScreensNeeded={phoneScreensNeeded}/>
+          ? <PhoneEval phoneScreensNeeded={phoneScreensNeeded} />
           : <Typography style={{ fontSize: 22 }}>
             You're doing very well receiving phone screenings from the companies you applied to!
           </Typography>
         }
         <br />
         { interviewsRate < 50
-          ? <div>
-            <Typography style={{ fontSize: 22 }}>
-              You are having some difficulty receiving interviews from the companies you applied to. You should practice and improve your personal narrative.
-            </Typography>
-            <Typography style={{ fontSize: 22 }}>
-              {`You need to send ${interviewsNeeded} more application(s) and receive the same number of interviews to reach the target rate.`}
-            </Typography>
-          </div>
+          ? <InterviewEval interviewsNeeded={interviewsNeeded} />
           : <Typography style={{ fontSize: 22 }}>
             You're doing very well receiving phone screens from the companies you applied to!
           </Typography>
